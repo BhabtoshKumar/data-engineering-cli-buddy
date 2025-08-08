@@ -1,0 +1,352 @@
+# Cursor requirements file
+cursor-requirements.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ollama models (if stored locally)
+models/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Data files and databases (but allow sample data in data_pipeline/)
+*.db
+*.sqlite
+*.sqlite3
+# Don't ignore JSON files in data_pipeline/schemas/ as they are sample schemas
+# *.json
+*.parquet
+*.avro
+*.orc
+
+# Configuration files with secrets
+.env
+.env.local
+.env.production
+.env.staging
+config.ini
+secrets.json
+credentials.json
+
+# Logs and debugging
+*.log
+logs/
+debug/
+*.debug
+
+# Cache and temporary directories
+.cache/
+tmp/
+temp/
+.tmp/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Virtual environments
+venv/
+env/
+.venv/
+.ENV/
+
+# Package builds
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ollama and AI model files
+models/
+*.gguf
+*.bin
+ollama/
+
+# API keys and tokens
+*.key
+*.pem
+*.p12
+*.pfx
+api_keys.txt
+tokens.txt
+
+# Local development files
+local_settings.py
+local_config.py
+dev_config.py
+
+# Docker and container files
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes files
+*.kubeconfig
+
+# Airflow specific
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+webserver_config.py
+
+# dbt specific
+dbt_packages/
+target/
+logs/
+profiles.yml
+
+# Spark specific
+spark-defaults.conf
+spark-env.sh
+
+# Kafka specific
+server.properties
+log4j.properties
+
+# Monitoring and metrics
+prometheus.yml
+grafana.ini
+*.metrics
+
+# Backup and archive files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Large data files (but allow sample data in data_pipeline/)
+*.csv.gz
+*.json.gz
+*.parquet.gz
+# Don't ignore data_pipeline/ as it contains sample data
+# data/
+datasets/
+raw_data/
+processed_data/
+
+# Model files and artifacts
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.onnx
+*.pb
+*.tflite
+models/
+checkpoints/
+artifacts/
+
+# Database dumps (but allow sample SQL in data_pipeline/)
+# Don't ignore *.sql files in data_pipeline/ as they are sample queries
+# *.sql
+*.dump
+*.backup
+
+# Network and security
+*.pcap
+*.cap
+*.key
+*.crt
+*.csr
+*.pem
+
+# Performance and profiling
+*.prof
+*.profile
+*.trace
+*.perf
+
+# Documentation drafts
+drafts/
+*.draft
+*.wip
+
+# Personal notes and todos
+TODO.md
+NOTES.md
+*.todo
+*.note
+
+# Experimental and research files
+experiments/
+research/
+*.experiment
+*.research
+
+# Deployment and infrastructure
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+
+# CI/CD specific
+.github/workflows/*.yml.bak
+.gitlab-ci.yml.bak
+.travis.yml.bak
+
+# Local development overrides
+local_*
+dev_*
+test_*

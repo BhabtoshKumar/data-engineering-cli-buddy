@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Unique identifier for the event"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "Customer identifier"
+    },
+    "event_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the event occurred"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": ["page_view", "purchase", "cart_add", "cart_remove", "search", "login", "logout"],
+      "description": "Type of customer event"
+    },
+    "event_properties": {
+      "type": "object",
+      "properties": {
+        "product_id": {
+          "type": "string",
+          "description": "Product identifier if applicable"
+        },
+        "category": {
+          "type": "string",
+          "description": "Product category"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Transaction amount if applicable"
+        },
+        "page_url": {
+          "type": "string",
+          "description": "URL of the page where event occurred"
+        },
+        "session_id": {
+          "type": "string",
+          "description": "Session identifier"
+        },
+        "user_agent": {
+          "type": "string",
+          "description": "User agent string"
+        },
+        "ip_address": {
+          "type": "string",
+          "description": "IP address of the user"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_system": {
+      "type": "string",
+      "enum": ["mobile_app", "web_app", "api"],
+      "description": "System that generated the event"
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    }
+  },
+  "required": ["event_id", "customer_id", "event_timestamp", "event_type", "source_system"],
+  "additionalProperties": false
+}

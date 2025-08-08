@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-engineering-copilot"
+version = "0.1.0"
+description = "CLI-based AI Copilot for Data Engineers powered by local LLMs"
+authors = [
+    {name = "Data Engineering Copilot Team", email = "team@dataengineeringcopilot.dev"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+keywords = ["data-engineering", "cli", "ai", "llm", "sql", "airflow", "dbt"]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.10",
+    "ollama>=0.1.0",
+    "sqlparse>=0.4.0",
+    "ruamel.yaml>=0.18.0",
+    "pydantic>=2.0.0",
+    "deepdiff>=6.0.0",
+    "jsonschema>=4.0.0",
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+copilot = "copilot_cli.cli.main:app"
+
+[project.urls]
+Homepage = "https://github.com/data-engineering-copilot/cli"
+Repository = "https://github.com/data-engineering-copilot/cli"
+Documentation = "https://data-engineering-copilot.dev"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["copilot_cli*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
